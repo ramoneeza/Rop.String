@@ -17,6 +17,13 @@
 	  <LangVersion>9.0</LangVersion>
   </PropertyGroup>
 
+	<ItemGroup>
+		<Compile Remove="Packs\**" />
+		<EmbeddedResource Remove="Packs\**" />
+		<None Remove="Packs\**" />
+		<None Include="..\Readme.md" Pack="true" PackagePath="\"/>
+	</ItemGroup>
+
   <ItemGroup>
     <PackageReference Include="System.Memory" Version="4.5.4" />
   </ItemGroup>

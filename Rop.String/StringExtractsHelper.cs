@@ -158,7 +158,7 @@ namespace Rop.String
         /// </summary>
         /// <param name="cad">String</param>
         /// <returns>Domain, user tuple</returns>
-        public static (string Domain, string User) StripDomain(string cad)
+        public static (string Domain, string User) StripDomain(this string cad)
         {
             var r = cad.Break("\\");
             if (r.Item2!="") return r;
@@ -172,7 +172,7 @@ namespace Rop.String
         /// <param name="cad">String</param>
         /// <param name="ensuredomain">Domain to ensure</param>
         /// <returns>Account name or empty if not match</returns>
-        public static string StripDomain(string cad,string ensuredomain)
+        public static string StripDomain(this string cad,string ensuredomain)
         {
             var r = StripDomain(cad);
             if (!r.Item1.StartsWithNoCase(ensuredomain)) return "";

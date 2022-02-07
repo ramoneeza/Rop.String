@@ -34,13 +34,13 @@ Helper class hexadecimal strings relative
 
 ```csharp
 /// Unicode string to Hex (WideChar)
-public static string ToHexStringW(this string str)
+public static string ToHexStringW(this string str);
 /// Hex to Unicode String (Wide)
-public static string FromHexStringW(this string hexString)
+public static string FromHexStringW(this string hexString);
 /// Ascii String to Hex (Byte char)
-public static string ToHexString(this string str)
+public static string ToHexString(this string str);
 /// Hex String to Ascii String
-public static string FromHexString(this string hexString)
+public static string FromHexString(this string hexString);
  ```
 
 
@@ -51,9 +51,9 @@ Helper class relative to StringBuilder
 
 ```csharp
 /// Append Line with linux end of line
-public static StringBuilder AppendUnixLine(this StringBuilder std, string value)
+public static StringBuilder AppendUnixLine(this StringBuilder std, string value);
 /// Append linux end of line
-public static StringBuilder AppendUnixLine(this StringBuilder std)
+public static StringBuilder AppendUnixLine(this StringBuilder std);
 ```
 
 `StringCase` helper
@@ -97,9 +97,9 @@ public static string RightTo(this string cad, string sep, bool ignorecase = fals
 /// Breaks a string in two parts
 public static (string, string) Break(this string cad, string separator, bool ignorecase = false);
 /// Break a string representing a domain account
-public static (string Domain, string User) StripDomain(string cad);
+public static (string Domain, string User) StripDomain(this string cad);
 /// Get user part of a string representing a domain account ensuring domain name
-public static string StripDomain(string cad,string ensuredomain);
+public static string StripDomain(this string cad,string ensuredomain);
 ```
 
 `String` helper
