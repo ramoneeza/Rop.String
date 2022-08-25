@@ -72,7 +72,8 @@ namespace Rop.String
         /// <exception cref="ArgumentNullException"></exception>
         public static bool EqualsNoCase(this string a, string b)
         {
-            if (a == null) throw new ArgumentNullException(nameof(a));
+            if (a == null && b == null) return true;
+            if (a == null || b == null) return false;
             return a.Equals(b, StringComparison.OrdinalIgnoreCase);
         }
 
